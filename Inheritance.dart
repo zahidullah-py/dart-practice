@@ -25,11 +25,26 @@ class Student extends Person{
   //display method 
   void display(){
     super.display();
-    print('marks : $marks \nRoll number $Rollno');
+    print('marks : $marks \ncRoll number $Rollno');
+  }
+}
+
+//teacher class 
+class teacher extends Person{
+
+  teacher(String name, int age):super(name,age);
+
+  void role(){
+    print("I am a teacher");
   }
 }
 
 void main(){
   Student student1=Student("zahid ullah", 20, 85.5, 123);
   student1.display();
+
+  teacher t1= teacher("zahid ", 24);
+  
+  t1.display();
+  t1.role();
 }
