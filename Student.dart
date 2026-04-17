@@ -20,8 +20,8 @@ class Student{
     _age=age;
   }
 
-  set marks(double marks){
-    _marks=marks;
+    set marks(double marks) {
+    if (marks >= 0 && marks <= 100) _marks = marks;
   }
 
   //Getter 
@@ -35,13 +35,12 @@ class Student{
 
   //display method 
 
-  void display(){
-    print(".....STUDENT Recored.....");
-    print('the Roll numbre of the student is : $_rollno');
-    print('the name of the student is :$_name');
-    print('the student age is : $_age');
-    print('the student marks is : $_marks');
-    print('object');
+ void display() {
+    print(".....STUDENT RECORD.....");
+    print('Roll number: $_rollno');
+    print('Name: $_name');
+    print('Age: $_age');
+    print('Marks: $_marks');
   }
 }
 
@@ -51,9 +50,9 @@ void main(){
 
   s1.display();
 
-  s1.Rollnumber=2;
-  s1._name="Ali";
-  s1._age=21;
-  s1._marks=85.5;
+  s1.Rollnumber = 2;
+  s1.name = "Ali";
+  s1.age = 21;
+  s1.marks = 85.5;
   s1.display();
 }
